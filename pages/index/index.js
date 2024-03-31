@@ -7,6 +7,62 @@ const app = getApp()
 
 Page({
     data: {
+      categoryList:[
+          {
+            categoryName:'全国发货',
+          },
+          {
+            categoryName:'源头工厂',
+          },
+          {
+            categoryName:'品质保障',
+          },
+          {
+            categoryName:'量大从优',
+          }
+        ],
+        skillCategory:[
+          {
+            skillType:'left',
+            list:[
+              {
+                skillName:'各类发光字',
+              },
+              {
+                skillName:'党建标识牌',
+              },
+              {
+                skillName:'乡村标识牌',
+              },
+              {
+                skillName:'景观标识',
+              },
+              {
+                skillName:'吊牌灯箱',
+              },
+            ]
+          },
+          {
+            skillType:'left',
+            list:[
+              {
+                skillName:'各类发光字',
+              },
+              {
+                skillName:'党建标识牌',
+              },
+              {
+                skillName:'乡村标识牌',
+              },
+              {
+                skillName:'景观标识',
+              },
+              {
+                skillName:'吊牌灯箱',
+              },
+            ]
+          }
+        ],
         floorGoods: [],
         openAttr: false,
         showChannel: 0,
@@ -60,8 +116,8 @@ Page({
     onShareAppMessage: function () {
         let info = wx.getStorageSync('userInfo');
         return {
-            title: '海风小店',
-            desc: '开源微信小程序商城',
+            title: '金点子商城',
+            desc: '小程序商城',
             path: '/pages/index/index?id=' + info.id
         }
     },

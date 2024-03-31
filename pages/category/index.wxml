@@ -1,4 +1,16 @@
 <view class="container">
+    <view class='banner-wrap' wx:if="{{show_banner && banner.length > 0}}">
+        <swiper class="banner" indicator-dots="true" autoplay="{{autoplay}}" interval="3000" duration="1000"   >
+            <swiper-item wx:for="{{banner}}" wx:key="id">
+                <navigator wx:if="{{item.link_type == 0}}" url="/pages/goods/goods?id={{item.goods_id}}">
+                    <image src="{{item.image_url}}" background-size="cover"></image>
+                </navigator>
+                <navigator wx:elif="{{item.link_type == 1}}" url="{{item.link}}">
+                    <image src="{{item.image_url}}" background-size="cover"></image>
+                </navigator>
+            </swiper-item>
+        </swiper>
+    </view>
     <view class="search">
         <navigator url="/pages/search/search" class="input">
             <image class="icon" src="/images/icon/search.png"></image>

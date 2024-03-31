@@ -64,6 +64,15 @@
         </view>
     </view>
     <view class="li-wrap">
+      <view class="list" bindtap="toPointManager">
+            <view class="list-l">
+                <view class="icon">
+                  <van-icon name="points" size="38rpx"/> 
+                </view>
+                <view class="text">积分明细</view>
+            </view>
+            <view class="arrow"></view>
+        </view>
         <view class="list" bindtap="toAddressList">
             <view class="list-l">
                 <view class="icon">
@@ -102,12 +111,5 @@
             </view>
             <view class="arrow"></view>
         </view>
-    </view>
-    <view class="company">
-        <view class="c-wrap" bindtap="getOrderInfo">
-            <view class="text">海风小店</view>
-            <view class="line"></view>
-        </view>
-        <view class="tip">开源微信小程序商城</view>
     </view>
 </view>

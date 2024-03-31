@@ -19,7 +19,9 @@
         "pages/ucenter/express-info/index",
         "pages/ucenter/footprint/index",
         "pages/payResult/payResult",
-        "pages/payOffline/index"
+        "pages/payOffline/index",
+        "pages/member/index",
+        "pages/point-manager/index"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -29,8 +31,8 @@
         "enablePullDownRefresh": true
     },
     "tabBar": {
-        "color": "#6e6d6b",
-        "selectedColor": "#ff3456",
+        "color": "#000",
+        "selectedColor": "#FFA500",
         "borderStyle": "white",
         "backgroundColor": "#fff",
         "list": [
@@ -41,16 +43,16 @@
                 "text": "首页"
             },
             {
-                "pagePath": "pages/category/index",
+                "pagePath": "pages/ucenter/order-list/index",
                 "iconPath": "images/nav/icon-cate-off.png",
                 "selectedIconPath": "images/nav/icon-cate-on.png",
-                "text": "分类"
+                "text": "订单"
             },
             {
-                "pagePath": "pages/cart/cart",
+                "pagePath": "pages/member/index",
                 "iconPath": "images/nav/icon-cart-b.png",
                 "selectedIconPath": "images/nav/icon-cart-r.png",
-                "text": "购物车"
+                "text": "积分"
             },
             {
                 "pagePath": "pages/ucenter/index/index",
@@ -60,5 +62,14 @@
             }
         ]
     },
-    "sitemapLocation": "sitemap.json"
+    "sitemapLocation": "sitemap.json",
+    "usingComponents":{
+      "van-icon": "@vant/weapp/icon/index",
+      "van-sticky": "@vant/weapp/sticky/index",
+      "van-grid": "@vant/weapp/grid/index",
+      "van-grid-item": "@vant/weapp/grid-item/index",
+      "van-cell": "@vant/weapp/cell/index",
+      "van-cell-group": "@vant/weapp/cell-group/index",
+      "van-tag": "@vant/weapp/tag/index"
+    }
 }

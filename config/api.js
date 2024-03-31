@@ -1,6 +1,6 @@
-const ApiRoot = 'http://localhost:8361';
-// const ApiRoot = 'http://192.168.0.113:8361';
-// const ApiRoot = 'https://www.qile.club:8688';
+// const ApiRoot = 'https://www.hjjindianzi.cn';
+const ApiRoot = 'https://119.29.217.93';
+// const ApiRoot = 'http://119.29.217.93:8360';
 const ApiRootUrl = ApiRoot + '/api/'
 
 module.exports = {

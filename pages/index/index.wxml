@@ -5,11 +5,39 @@
             <view class='text'>客服</view>
         </button>
     </view>
-    <view class="search" bindtap="goSearch">
+    <view class='information-container'>
+      <text class='mall_name'>金点子广告商城</text>
+      <view class='category_list'>
+        <text class="category" wx:for="{{categoryList}}" wx:key="categoryName">{{item.categoryName}}</text>
+      </view>
+      <view class='skill_container'>
+        <view class="skill_list" wx:for="{{skillCategory}}" wx:key="skillType">
+          <text class='skill_item' wx:for="{{item.list}}" wx:key="skillName">
+            {{item.skillName}}
+          </text>
+        </view>
+      </view>
+      <view class="custom_container">
+        <view class="custom_data">
+          <text class="custom_name">客户名称</text>
+          <text class="custom_level">铂金会员</text>
+        </view>
+        <view class='balance'>
+          <text class="count">0.00</text>
+          <text class="description">余额</text>
+        </view>
+        <view class='point'>
+          <text class="count">0.00</text>
+          <text class="description">积分</text>
+        </view>
+      </view>
+    </view>
+    
+    <!-- <view class="search" bindtap="goSearch">
         <image class="icon" src="/images/icon/search.png"></image>
         <text class="txt">搜索,发现更多好物</text>
-    </view>
-    <view class='banner-wrap' wx:if="{{show_banner && banner.length > 0}}">
+    </view> -->
+    <!-- <view class='banner-wrap' wx:if="{{show_banner && banner.length > 0}}">
         <swiper class="banner" indicator-dots="true" autoplay="{{autoplay}}" interval="3000" duration="1000"   >
             <swiper-item wx:for="{{banner}}" wx:key="id">
                 <navigator wx:if="{{item.link_type == 0}}" url="/pages/goods/goods?id={{item.goods_id}}">
@@ -20,7 +48,7 @@
                 </navigator>
             </swiper-item>
         </swiper>
-    </view>
+    </view> -->
     <view class='marquee_box' wx:if="{{notice.length>0 && show_notice == 1}}">
         <swiper vertical="{{true}}" class="notice-swiper" indicator-dots="{{false}}" autoplay="{{autoplay}}" interval="2000" duration="1000">
             <swiper-item wx:for="{{notice}}" wx:key="id" class='notice-wrap'>
@@ -35,7 +63,7 @@
         </swiper>
     </view>
     <!-- <ad unit-id="adunit-c755904541658aa1" ad-type="grid" grid-opacity="0.8" grid-count="5" ad-theme="white"></ad> -->
-    <swiper class="catalog-wrap" indicator-dots="{{false}}" indicator-color="#dedede" indicator-active-color="#e00000" wx:if="{{show_channel}}">
+    <!-- <swiper class="catalog-wrap" indicator-dots="{{false}}" indicator-color="#dedede" indicator-active-color="#e00000" wx:if="{{show_channel}}">
         <swiper-item class="first">
             <view wx:for="{{channel}}" wx:if="{{item.sort_order < 7}}" wx:key="id" class='icon-navi' data-cateid="{{item.id}}" bindtap="goCategory">
                 <image class='icon-img' src="{{item.icon_url}}"></image>
@@ -54,8 +82,8 @@
                 <view class='icon-text'>{{item.name}}</view>
             </navigator>
         </swiper-item>
-    </swiper>
-    <view class="goods-container">
+    </swiper> -->
+    <!-- <view class="goods-container">
         <view class='topic-container' wx:for="{{floorGoods}}" wx:key="id">
             <view class='banner-container' bindtap="goCategory" data-cateid="{{item.id}}" wx:if="{{index_banner_img == 1}}">
                 <image mode='aspectFill' style="width:100%;height:{{item.height}}rpx" src='{{item.banner}}'>
@@ -95,11 +123,22 @@
             </view>
             <view class="more-category" data-cateid="{{item.id}}" bindtap="goCategory">点击查看更多{{item.name}}</view>
         </view>
-    </view>
+    </view> -->
     <!-- <ad unit-id="adunit-b6fcdb43b7913591"></ad> -->
-    <view class="no-more-goods ">没有更多商品啦</view>
+    <!-- <view class="no-more-goods ">没有更多商品啦</view> -->
+    <view class="control_box_container">
+      <navigator hover-class="none" class='main-button buy' url="/pages/category/index">
+          <van-icon name="orders-o" size="100rpx" color="orange" />
+          <view class='icon-text'>在线下单</view>
+      </navigator>
+      <view class="line"></view>
+      <navigator hover-class="none" class='main-button member' url="/pages/member/index" 	open-type="switchTab">
+          <van-icon name="gift-o" size="100rpx" color="orange" />
+          <view class='icon-text'>积分兑换</view>
+      </navigator>
+    </view>
 </view>
 <view class="loading" style="height:{{sysHeight}}px" wx:else>
     <image class="img" src="/images/icon/loading.gif"></image>
-    <view class="text">海风吹啊吹</view>
+    <view class="text">loading...</view>
 </view>

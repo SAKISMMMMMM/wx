@@ -124,14 +124,14 @@
 
 .banner-wrap {
     width: 100%;
-    height: 440rpx;
+    height: 660rpx;
     display: flex;
     justify-content: center;
 }
 
 .banner {
-    width: 750rpx;
-    height: 440rpx;
+    width: 100%;
+    height: 660rpx;
 }
 
 .banner image {
@@ -466,4 +466,140 @@
     font-size: 28rpx;
     margin: 20rpx 0 30rpx 0;
     color: #999;
+}
+
+.control_box_container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 160rpx auto 0;
+  width: 90%;
+  height: 260rpx;
+  border: 1rpx solid orange;
+}
+.control_box_container .line{
+  width: 1rpx;
+  background-color: #c8c8c8;
+  height: 160rpx;
+}
+.control_box_container .main-button{
+  width: 220rpx;
+  height: 160rpx;
+  border-radius: 4px;
+  color:#fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: orange;
+}
+.main-button .icon-text{
+  margin-top: 28rpx;
+  color: orange;
+}
+.main-button.buy{
+  /* background-color:red; */
+  
+}
+
+.main-button.member{
+  /* background-color:orange; */
+}
+
+.member-info-container,.sale-info-container{
+ font-size: 20px;
+ padding: 16rpx 0;
+}
+.member-info-container{
+  display: flex;
+  justify-content: space-around;
+}
+.sale-info-container{
+  padding-left: 32px;
+  padding-right: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+/*
+new
+*/
+
+.information-container{
+  background-color: orange;
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 38rpx;
+}
+.mall_name{
+  font-size: 58rpx;
+  color:#fff;
+  font-weight: 600;
+}
+.category_list{
+  margin-top: 28rpx;
+  font-size: 28rpx;
+  color:#fff;
+  display: flex;
+}
+.category_list .category:not(:last-child){
+  padding-right: 12rpx;
+  border-right: 1rpx solid #fff;
+}
+
+.category_list .category:not(:first-child){
+ margin-left: 12rpx;
+}
+
+.skill_container{
+  margin-top: 48rpx;
+  display: flex;
+  width: 60%;
+  justify-content: space-around;
+}
+.skill_list{
+  color:#fff;
+  font-size: 28rpx;
+  line-height: 24rpx;
+}
+.custom_container{
+  background-color: #fff;
+  border-radius: 6px;
+  border: 1rpx solid orange;
+  display: flex;
+  width: 96%;
+  justify-content: space-around;
+  padding: 26rpx 0;
+  margin-top: 100rpx;
+}
+.custom_data, .balance, .point{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.custom_data .custom_name{
+  font-size: 36rpx;
+}
+.custom_data .custom_level{
+  background-color: orange;
+  color:#fff;
+  border-radius: 6rpx;
+  padding: 4rpx 12rpx;
+  margin-top: 6rpx;
+}
+.balance .description, .point .description{
+  color: orange;
+  margin-top: 6rpx;
+}
+
+.balance .count, .point .count{
+  font-size: 48rpx;
 }

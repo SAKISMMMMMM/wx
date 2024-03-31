@@ -28,8 +28,8 @@ Page({
     if (res == true) {
       let showType = event.currentTarget.dataset.index;
       wx.setStorageSync('showType', showType);
-      wx.navigateTo({
-        url: '/pages/ucenter/order-list/index?showType=' + showType,
+      wx.switchTab({
+        url: '/pages/ucenter/order-list/index?showType=',
       });
     }
   },
@@ -38,6 +38,14 @@ Page({
     if (res == true) {
       wx.navigateTo({
         url: '/pages/ucenter/address/index?type=0',
+      });
+    }
+  },
+  toPointManager(){
+    let res = util.loginNow();
+    if (res == true) {
+      wx.navigateTo({
+        url: '/pages/point-manager/index',
       });
     }
   },

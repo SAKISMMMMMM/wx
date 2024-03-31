@@ -1,0 +1,28 @@
+<view class="container">
+  <van-sticky>
+    <van-grid column-num="1">
+      <van-grid-item icon="balance-o" text="205.00"  />
+    </van-grid>
+  </van-sticky>
+  <van-cell-group>
+    <van-cell icon="points" value="积分变动" label="兑换商品">
+      <view slot="title">
+        <view class="van-cell-text">-120</view>
+        <van-tag type="warning">积分减少</van-tag>
+      </view>
+    </van-cell>
+    <van-cell icon="points" value="积分变动" label="兑换商品">
+      <view slot="title">
+        <view class="van-cell-text">-100</view>
+        <van-tag type="warning">积分减少</van-tag>
+      </view>
+    </van-cell>
+    <van-cell icon="points" value="积分变动" label="消费增加">
+      <view slot="title">
+        <view class="van-cell-text">+1400</view>
+        <van-tag type="primary">积分增加</van-tag>
+      </view>
+    </van-cell>
+  </van-cell-group>
+  
+</view>
