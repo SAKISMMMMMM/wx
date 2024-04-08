@@ -31,10 +31,9 @@
         "enablePullDownRefresh": true
     },
     "tabBar": {
-        "color": "#000",
-        "selectedColor": "#FFA500",
-        "borderStyle": "white",
-        "backgroundColor": "#fff",
+        "color": "#fff",
+        "selectedColor": "#feef50",
+        "backgroundColor": "#EB6100",
         "list": [
             {
                 "pagePath": "pages/index/index",
@@ -43,22 +42,28 @@
                 "text": "首页"
             },
             {
-                "pagePath": "pages/ucenter/order-list/index",
-                "iconPath": "images/nav/icon-cate-off.png",
-                "selectedIconPath": "images/nav/icon-cate-on.png",
-                "text": "订单"
+              "pagePath": "pages/cart/cart",
+              "iconPath": "images/nav/icon-cart-b.png",
+              "selectedIconPath": "images/nav/icon-cart-r.png",
+              "text": "购物车"
+            },
+            {
+                "pagePath": "pages/category/index",
+                "iconPath": "images/nav/icon-stop-b.png",
+                "selectedIconPath": "images/nav/icon-stop-r.png",
+                "text": "商城"
             },
             {
                 "pagePath": "pages/member/index",
-                "iconPath": "images/nav/icon-cart-b.png",
-                "selectedIconPath": "images/nav/icon-cart-r.png",
-                "text": "积分"
+                "iconPath": "images/nav/icon-meber-b.png",
+                "selectedIconPath": "images/nav/icon-meber-r.png",
+                "text": "会员"
             },
             {
                 "pagePath": "pages/ucenter/index/index",
-                "iconPath": "images/nav/icon-center-b.png",
-                "selectedIconPath": "images/nav/icon-center-r.png",
-                "text": "我的"
+                "iconPath": "images/nav/icon-person-b.png",
+                "selectedIconPath": "images/nav/icon-person-r.png",
+                "text": "个人"
             }
         ]
     },
